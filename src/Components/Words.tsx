@@ -57,8 +57,7 @@ const Words = () => {
 
   return (
     <div className="textStyle">
-        Lose
-        Win
+        <h1>Hangman!</h1>
         <HangmanImage guessNumber={incorrectLetters.length}/> {/* tracks the incorrect letters, called here instead of app.tsx because of the guessNumber and incorrectletters variables */}
         <DisplayWord guessedLetters={gussedLetters} wordToGuess={wordGuess}/>  
     </div>

@@ -10,7 +10,7 @@ interface LettersProps {
 const Letters = ({activeLetters, inactiveLetters, addGuessedLetter}:LettersProps) => {
   return (
     <div className="keyboard">
-        {keys.map(key => <button onClick={() => addGuessedLetter(key)} key={key} className="keyButtons">{key}</button>)}
+        {keys.map(key => <button onClick={() => addGuessedLetter(key)} key={key} className="keyButtons" disabled={inactiveLetters.includes(key)}>{key}</button>)}
     </div>
   )
 }
