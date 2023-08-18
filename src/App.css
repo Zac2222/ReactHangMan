@@ -2,7 +2,7 @@
  max-width: 800px;
  display: flex;
  flex-direction: column; 
- gap: 2rem;
+ gap: 40px;
  margin: 0 auto;
  align-items: center;
 }
@@ -43,8 +43,94 @@
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  border: 10px solid blue;
+  border: 6px solid blue;
   position: absolute;
   top: 50px;
   right: -20px;
+}
+.body{
+  width: 10px;
+  height: 100px;
+  background: blue;
+  position: absolute;
+  top: 99px;
+  right: 0px;
+}
+.armRight{
+  width: 90px;
+  height: 10px;
+  background: blue;
+  position: absolute;
+  top: 145px;
+  right: -75px;
+  rotate: 40deg; 
+}
+.armLeft{
+  width: 90px;
+  height: 10px;
+  background: blue;
+  position: absolute;
+  top: 145px;
+  right: -3px;
+  rotate: -40deg; 
+}
+.legRight{
+  width: 90px;
+  height: 10px;
+  background: blue;
+  position: absolute;
+  top: 235px;
+  right: -55px;
+  rotate: 70deg; 
+}
+.legLeft{
+  width: 90px;
+  height: 10px;
+  background: blue;
+  position: absolute;
+  top: 235px;
+  right: -25px;
+  rotate: -70deg; 
+}
+
+.display{
+  display: flex;
+  gap: .25em;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.underlind{
+  border-bottom: .1em solid black;
+}
+
+.keyboard{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: 30px;
+  align-self: stretch;
+}
+
+.keyButtons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.keyButtons:hover:not(:disabled){
+  background: rgb(141, 141, 245);
+}
+.keyButtons.active{
+  background: rgb(141, 141, 245);
+  transform: scale(.9);
+}
+.keyButtons.inactive{
+  opacity: .3;
 }
